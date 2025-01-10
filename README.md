@@ -29,7 +29,7 @@ ONNX Audio Classifier is a modular, cross-platform library for real-time audio c
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-repo>/ONNXAudioClassifier.git
+   git clone https://github.com/mohannadrabie/ONNXAudioClassifier.git
    cd ONNXAudioClassifier
    ```
 
