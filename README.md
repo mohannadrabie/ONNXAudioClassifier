@@ -53,11 +53,11 @@ ONNX Audio Classifier is a modular, cross-platform library for real-time audio c
 ### Command-Line Interface
 1. Build the CLI:
    ```bash
-   msbuild ONNXAudioClassifier.CLI/ONNXAudioClassifier.CLI.csproj /t:Build /p:Configuration=Release
+   msbuild ONNXAudioClassifier.CLI/ONNXAudioClassifier.CLI.csproj /t:Build /p:Configuration=Release /p:OutputPath=./ReleaseBuild
    ```
 2. Run the CLI:
    ```bash
-   dotnet ONNXAudioClassifier.CLI.dll
+   dotnet ONNXAudioClassifier.CLI\ReleaseBuild\ONNXAudioClassifier.CLI.dll
    ```
 
 ### Cross-Platform
