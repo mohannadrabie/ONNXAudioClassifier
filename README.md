@@ -45,7 +45,7 @@ ONNX Audio Classifier is a modular, cross-platform library for real-time audio c
 
 ## Running the Application
 
-### Windows
+### Visual Studio
 1. Open `ONNXAudioClassifier.sln` in Visual Studio.
 2. Set the desired startup project (CLI).
 3. Run the project.
