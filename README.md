@@ -1,5 +1,5 @@
 
-# ONNXAudioClassifier 
+# ONNXAudioClassifier    
 
 ONNX Audio Classifier is a modular, cross-platform library for real-time audio classification. Built with .NET MAUI and ONNX Runtime, it delivers lightweight inference for a seamless performance across Desktop and Mobile (Android, and iOS).
 
