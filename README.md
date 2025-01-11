@@ -1,3 +1,4 @@
+![Build Status](https://github.com/mohannadrabie/ONNXAudioClassifier/actions/workflows/dotnet-desktop.yml/badge.svg)
 
 # ONNXAudioClassifier
 
