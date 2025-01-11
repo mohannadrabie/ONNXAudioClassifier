@@ -67,13 +67,11 @@ jobs:
     - name: Build CLI Project
       run: dotnet build ONNXAudioClassifier.CLI/ONNXAudioClassifier.CLI.csproj -c Release --framework net9.0
 
-    - name: Package Assemblies
+    - name: Package All Build Output
       shell: pwsh
       run: |
         mkdir -p artifacts
-        Get-ChildItem -Path "D:\a\ONNXAudioClassifier\ONNXAudioClassifier\**\bin\Release\net9.0**\*.dll" -Recurse | ForEach-Object {
-          Copy-Item $_.FullName -Destination artifacts
-        }
+        Copy-Item -Path "D:\a\ONNXAudioClassifier\ONNXAudioClassifier\**\bin\Release\net9.0" -Destination artifacts -Recurse -Force
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
