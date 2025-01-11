@@ -69,20 +69,19 @@ jobs:
       with:
         dotnet-version: 9
 
-    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
-    - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v2
-
     - name: Restore Dependencies
       run: dotnet restore
 
-    - name: Build for Windows
-      run: dotnet build --configuration Release
+    - name: Build Solution
+      run: dotnet build ONNXAudioClassifier.sln -c Release --framework net9.0
 
     - name: Package Assemblies
+      shell: pwsh
       run: |
         mkdir -p artifacts
-        find . -name '*.dll' -exec cp {} artifacts/ \;
+        Get-ChildItem -Path "D:\a\ONNXAudioClassifier\ONNXAudioClassifier\**\bin\Release\net9.0**\*.dll" -Recurse | ForEach-Object {
+          Copy-Item $_.FullName -Destination artifacts
+        }
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
